@@ -1,0 +1,16 @@
+ion-toolbar{
+    background-color: var(--ion-color-mycolor);
+}
+
+#botones {
+    text-align: center;
+    vertical-align: bottom;
+    height: 20%;
+    width: 100%;
+    bottom: 0px;
+    position: absolute;
+}
+
+#botones ion-button{
+    font-family: 'Courier New', Courier, monospace;
+}

@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="MostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="success"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>formulario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Contáctanos!</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      
+      <form #formulario="ngForm" (keyup.enter)="Enviar()">
+        <ion-list>
+            <ion-item>
+              <ion-label position="floating">Nombre: </ion-label>
+              <ion-input type="text" placeholder="Cachupin.." name="nombre" 
+                      [(ngModel)]="usuario.nombre"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Email: </ion-label>
+              <ion-input type="email" placeholder="cachupin@mail.cl"
+                     name="email" [(ngModel)]="usuario.email"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="floating">Edad: </ion-label>
+              <ion-input type="number" placeholder="12.." 
+                     name="edad" min="17" max="100" [(ngModel)]="usuario.edad"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="floating">Password: </ion-label>
+              <ion-input type="password" placeholder="Hakuna Matata"
+                      name="password" [(ngModel)]="usuario.password"></ion-input>
+            </ion-item>
+        </ion-list>
+        <ion-button (click)="Enviar()" expand="block" fill="solid" color="success" shape="round">
+          Enviar
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
